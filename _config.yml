@@ -1,1 +1,22 @@
 github: [metadata]
+brief-intro: C++ Developer
+url: "https://dalzhim.github.io"
+
+permalink: /:year/:month/:day/:title/
+
+twitter_username: Gab_AL_
+github_username: Dalzhim
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+category_dir: category/
+tag_dir: tag/
+
+excerpt_separator: "\n\n\n\n"
+
+gems: [jekyll-paginate]
+paginate: 3
