@@ -2,22 +2,7 @@
 layout: post
 title: Predicate creation techniques for standard algorithms
 date: 2015-08-22 18:02:23.000000000 -04:00
-type: post
-published: true
-status: publish
-categories:
-- Non classé
-tags: []
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '13994290101'
-author:
-  login: dalzhim
-  email: dalzhim@hotmail.com
-  display_name: dalzhim
-  first_name: ''
-  last_name: ''
+author: dalzhim
 ---
 <p>Predicates are functions that return a boolean result upon being called. A predicate example is a function <code>bool isToday(Date&amp; date)</code> which returns if the supplied date object corresponds to the current day or not. The Standard Template Library (STL) has many algorithms to which predicates can be supplied : <code>count_if</code>, <code>find_if</code>, <code>copy_if</code>, <code>remove_if</code>, etc. You might have noticed the examples I have given share the suffix <code>_if</code> which hints to the presence of an argument which is a predicate. In this article, I will go over many different ways to implement a predicate that can be supplied to the STL algorithms in order to extract some elements from a collection. First, here is the collection that will be filtered :</p>
 <p>[code language="cpp"]class A<br />
