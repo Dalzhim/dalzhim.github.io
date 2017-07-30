@@ -1,9 +1,3 @@
----
-layout: post
-title: A custom iterator class for interval containers
-date: 2017-07-30 15:01:17.000000000 -04:00
-author: dalzhim
----
 I wrote an article two years ago about a peculiar usage of Boost.ICL with a `DomainType` that changes (dynamically) at runtime. That domain could be described as the elements of a container ordered according to a strict weak relationship. The implementation I offered worked, but it suffered a few weaknesses. The present article will go over the various weaknesses and offer a new implementation that addresses those issues.
 
 If you want to skim over the previous implementation, you can find it [on Github over here][1].
@@ -92,13 +86,13 @@ class dynamic_domain_iterator
 {
 public:
   dynamic_domain_iterator() : it(g_default_container.begin()) {}
-  […]
+  /* […] */
 
 private:
   const static std::map<K, V> g_default_container;
 };
 
-const std::map<K, V> dynamic_domain_iterator::g_default_container\{\{…element1…}, \{…element2…}};
+const std::map<K, V> dynamic_domain_iterator::g_default_container{ { /* …element1… */ }, { /* …element2… */ } };
 ```
 
 This solves the overhead problem introduced by the specialization of `is_empty`, and it also makes it completely unnecessary to specialize both `is_empty` and `unit_element`. I'm not sure this last piece of the puzzle could be considered very clean though. If anyone knows better, please let me know.

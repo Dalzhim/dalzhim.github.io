@@ -10,13 +10,12 @@ github_username: Dalzhim
 markdown: kramdown
 
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
 
 category_dir: category/
 tag_dir: tag/
 
-excerpt_separator: "\n\n\n\n"
+excerpt_separator: "\n\n"
 
 gems: [jekyll-paginate]
 paginate: 3
