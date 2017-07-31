@@ -22,9 +22,9 @@ As it turns out, there is an extension point that can be used to customize the d
 ```cpp
 namespace boost { namespace icl {
   template<>
-  struct interval_type_default
+  struct interval_type_default<dynamic_domain_iterator>
   {
-   using type = boost::icl::closed_interval;
+   using type = boost::icl::closed_interval<dynamic_domain_iterator>;
   };
 }}
 ```
