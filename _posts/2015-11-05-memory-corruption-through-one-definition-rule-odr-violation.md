@@ -1,3 +1,7 @@
+---
+tags: c++
+title: Memory Corruption Through One Definition Rule (ODR) Violation
+---
 Memory corruption is the symptom of a program that writes into the wrong memory location. There are a few different classes of bugs that can lead to memory corruption such as uninitialized memory, dangling pointers and buffer overflows. Recently, I've discovered a variety I had never seen before, which I'd consider a subclass of buffer overflows. Here's the short story.
 
 I've been asked to help to debug unstability with a piece of software for which there were crash reports coming in and for which we could reproduce the crash quite reliably, but never in the same way. Every crash would occur at some different location in the code in a seemingly random manner. When facing such a situation, memory corruption is an excellent hypothesis to start working with because corruption will lead to undefined behavior and this implies non-deterministic behavior.

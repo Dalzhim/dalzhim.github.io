@@ -1,3 +1,7 @@
+---
+tags: c++ boost
+title: Boost interval_map with a Dynamic Finite Domain
+---
 I have been exploring some particular use cases with boost ICL's interval_map in order to map values to intervals based on a dynamic finite domain. I would like to share what I have learned in the process so I will start with a quick overview of a few concepts of the ICL and then show some code snippets to get it working.
 
 ## Quick introduction to boost ICL

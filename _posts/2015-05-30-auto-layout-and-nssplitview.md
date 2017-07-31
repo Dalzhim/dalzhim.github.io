@@ -1,3 +1,7 @@
+---
+tags: objc
+title: Auto Layout and NSSplitView
+---
 Auto layout is an incredibly powerful tool and the official documentation advertises it as something that is easy and natural to use. Yet, there are some dark corners that aren't explored at all within it. Among those, the `NSSplitView` is one that has been quite a piece of work for me. This article is meant to shed some light on how to use auto layout with Apple's `NSSplitView`.
 
 The `NSSplitViewDelegate` protocol offers a way to constrain the way the splitters can be moved in order to make it possible to implement minimum and maximum sizes for every pane within the `NSSplitView`. Those methods are `-[NSSplitViewDelegate splitView:constrainMaxCoordinate:ofSubviewAt:]`, `-[NSSplitViewDelegate splitView:constrainMinCoordinate:ofSubviewAt:]` and `-[NSSplitViewDelegate splitView:constrainSplitPosition:ofSubviewAt:]`. Out of those delegate methods, `splitView:constrainMaxCoordinate:ofSubviewAt:` and `splitView:constrainMinCoordinate:ofSubviewAt:` are incompatible with auto layout. This is particularly painful when trying to convert an existing application to auto layout. Even though Apple advertises that auto layout can be adopted incrementally, you cannot use a single constraint inside a window where there is a `NSSplitView` that relies on one of those two incompatible methods without everything going wrong.

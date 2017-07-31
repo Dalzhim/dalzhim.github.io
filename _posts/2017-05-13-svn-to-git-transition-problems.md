@@ -1,3 +1,7 @@
+---
+tags: git svn tools
+title: SVN to Git Transition Problems
+---
 Source control is an extremely valuable tool most developers use nowadays and to me, both the commidity of making it easier to work with a team and keeping a complete history of changes made to the source code are very important features it delivers. Git is a tool that has gained a lot of marketshare in the source control ecosystem over the years, and with good reason : its design is very good and is more efficient for multiple workflows such as branching and contributing code to projects without being part of that project's team. This post isn't meant to argue about git over svn though. It's about things that can go wrong, without anyone noticing, while migrating an existing codebase from svn to git.
 
 ## Repository size

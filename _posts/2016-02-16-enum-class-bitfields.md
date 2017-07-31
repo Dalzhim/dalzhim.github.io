@@ -1,3 +1,7 @@
+---
+tags: c++
+title: Enum class bitfields
+---
 <p>C++11's addition of scoped enumeration has given us the ability to create stronger types that can't be accidentally converted between integer types and enumeration types.</p>
 ```cpp
 enum e

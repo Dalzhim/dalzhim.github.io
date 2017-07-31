@@ -1,3 +1,7 @@
+---
+tags: c++
+title: Compiling Facebook's Proxygen on OS X
+---
 The Proxygen library, from Facebook, allows the C++ programmer to program on both ends of the HTTP protocol : client and server. The library runs on Linux and has been used in production by Facebook for a few years before it was open sourced in november 2014. This should be considered a serious option as it delivers incredible performance to process HTTP requests on the server side.
 
 Proxygen's documentation isn't really great and it often seems easiest to just learn by looking at the sample code delivered along with the library. Don't raise your expectations, the aim of this article is not about improving the documentation. In fact, there's also another downside to proxygen's library in my opinion, it doesn't work out of the box on OS X even though it's a FreeBSD system. I have worked on a linux system for a few months to develop software using Proxygen and frustrated by the inferior tooling and the learning curves I had to go through, I decided to seriously get it to compile on OS X and that decision has been a success. Here's the recipe I've used.

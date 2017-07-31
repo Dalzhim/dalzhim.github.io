@@ -1,3 +1,7 @@
+---
+tags: objc
+title: Auto Layout and NSScrollView
+---
 Apple's auto layout guide states that constraints cannot be set to cross a view within the hierarchy if it sets the bounds manually using a `-[NSView layout]` or `-[UIView layoutSubviews]` override. It is also not possible to cross a view that has a bounds transform such as the `NSScrollView`. What this means, is that because the constraints aren't aware of the bounds transform or the manual manipulations on the frame property of a view, a hierarchy of views where the ancestor A containing a `NSScrollView` S which in turn contains a child C cannot set constraints on C that are related to A. S acts as a barrier for the constraint system.
 
 Those who have tried inserting content that depends on auto layout as the document view of a `NSScrollView` may have already found the documentation to be lacking in this regard. There are usually two major problems :
