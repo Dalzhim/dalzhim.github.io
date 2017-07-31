@@ -1,5 +1,5 @@
 ---
-tags: c++ STL
+tags: c++ stl
 title: Predicate Creation Techniques for Standard Algorithms
 ---
 Predicates are functions that return a boolean result upon being called. A predicate example is a function `bool isToday(Date& date)` which returns if the supplied date object corresponds to the current day or not. The Standard Template Library (STL) has many algorithms to which predicates can be supplied : `count_if`, `find_if`, `copy_if`, `remove_if`, etc. You might have noticed the examples I have given share the suffix `_if` which hints to the presence of an argument which is a predicate. In this article, I will go over many different ways to implement a predicate that can be supplied to the STL algorithms in order to extract some elements from a collection. First, here is the collection that will be filtered :
