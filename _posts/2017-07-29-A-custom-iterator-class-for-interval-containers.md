@@ -2,9 +2,7 @@
 tags: c++ boost
 title: A Custom Iterator Class for Interval Containers
 ---
-I wrote an article two years ago about a peculiar usage of Boost.ICL with a `DomainType` that changes (dynamically) at runtime. That domain could be described as the elements of a container ordered according to a strict weak relationship. The implementation I offered worked, but it suffered a few weaknesses. The present article will go over the various weaknesses and offer a new implementation that addresses those issues.
-
-If you want to skim over the previous implementation, you can find it [on Github over here][1].
+I wrote an article two years ago about a peculiar usage of Boost.ICL with a `DomainType` that changes (dynamically) at runtime. That domain could be described as the elements of a container ordered according to a strict weak relationship. The implementation I offered worked, but it suffered a few weaknesses. The present article will go over the various weaknesses and offer a new implementation that addresses those issues. If you want to skim over the previous implementation, you can find it [on Github over here][1].
 
 ## Deficiencies in the code from the previous article
 There are two deficiencies that are due to my previous lack of knowledge of the Boost.ICL extension points :
